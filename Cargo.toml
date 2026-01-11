@@ -1,0 +1,7 @@
+[package]
+name = "quickrust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rquickjs = "0.11"
