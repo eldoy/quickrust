@@ -16,6 +16,12 @@ fn main() {
         }))?;
         global.set("console", console)?;
 
+        ctx.eval::<(), _>(r#"
+            function add(a, b) {
+                return a + b
+            }
+        "#)?;
+
         let code = fs::read_to_string("script.js")?;
         ctx.eval::<(), _>(code)?;
 
